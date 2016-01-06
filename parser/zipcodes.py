@@ -8,7 +8,7 @@ class Zipcodes:
             zipcode = row["zip"]
             lat = row["latitude"]
             lng = row["longitude"]
-            zipcodes[zipcode] = [lat, lng]
+            zipcodes[zipcode] = [float(lat), float(lng)]
         self.dict = zipcodes
 
     def geocode(self, code):
